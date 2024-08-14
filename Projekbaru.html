@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DULLZ WANGSAF NEW</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #00B09B, #96C93D);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.whatsappbrand.com/wp-content/themes/whatsapp/assets/img/logo/whatsapp-logo.svg') no-repeat center center;
+            background-size: 60px;
+            opacity: 0.2;
+            z-index: 0;
+            transform: scale(1.5);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #333;
+            z-index: 1;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: left;
+            color: #555;
+            z-index: 1;
+            position: relative;
+        }
+
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+            position: relative;
+        }
+
+        button {
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        button:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .confirmation {
+            margin-top: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+            z-index: 1;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <p>
+      <marquee direction="">GUNAKAN WEBSITE INI HANYA UNTUK PENIPU DAN JANGAN MENGGUNAKAN WEBSITE INI UNTUK ORANG YANG TIDAK BERSALAH..</marquee>
+      </p>
+        <h1>DULLZ WANGSAF </h1>
+        <form id="messageForm">
+            <label for="targetNumber">Nomor Target😈:</label>
+            <input type="tel" id="targetNumber" name="targetNumber" required placeholder="Masukkan nomor target">
+
+            <label for="message">virext lu:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="kirim virtext terganas lu"></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+        <p id="confirmationMessage" class="confirmation hidden">hallo brads!</p>
+    </div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Ambil nilai dari form
+            const targetNumber = document.getElementById('targetNumber').value;
+            const message = document.getElementById('message').value;
+
+            // URL WhatsApp
+            const phoneNumber = encodeURIComponent(targetNumber);
+            const textMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${textMessage}`;
+
+            // Arahkan pengguna ke URL WhatsApp
+            window.open(whatsappURL, '_blank');
+
+            // Tampilkan pesan konfirmasi
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.classList.remove('hidden');
+
+            // Kosongkan form
+            document.getElementById('targetNumber').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>
